@@ -8,9 +8,33 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rabbitmq-test-java-client" />
       </profile>
+      <profile name="Annotation profile for rabbitmq-order-consumer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="rabbitmq-springboot-test" />
+        <module name="rabbitmq-order-consumer" />
+      </profile>
+      <profile name="Annotation profile for rabbitmq-order-producer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="rabbitmq-order-producer" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="rabbitmq-test-java-client (1)" target="11" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rabbitmq-order-consumer" options="-parameters" />
+      <module name="rabbitmq-order-producer" options="-parameters" />
+      <module name="rabbitmq-springboot-test" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -6,6 +6,10 @@
       <list>
         <option value="$PROJECT_DIR$/rabbitmq-test-java-client/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-test-java-client-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-springboot-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-springboot-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-order-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-order-producer/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

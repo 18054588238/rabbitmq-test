@@ -29,7 +29,7 @@ public class Worker {
         /*
         * durable:true,保证 队列 在服务器重启后仍然存在，防止在rabbitmq服务器崩溃后 消息丢失
         * */
-        channel.queueDeclare(QUEUE_NAME,true,false,false,null);
+        channel.queueDeclare(QUEUE_NAME,false,false,false,null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
         /*
         * 保证一次只向一个 工作进程 发送一条消息

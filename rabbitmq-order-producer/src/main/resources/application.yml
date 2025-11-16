@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: rabbitmq-order-producer
+  rabbitmq:
+    host: 172.16.30.21
+    password: 310012
+    username: rabbitmq
+    #    ????????????????????????
+    template:
+      retry:
+        enabled: true
+        initial-interval: 2s
